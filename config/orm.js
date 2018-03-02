@@ -9,9 +9,9 @@ var orm = {
            console.log(result);
         });
     },
-    selectOne: function(tableName,id){
-        var query = "SELECT * FROM ?? WHERE id = ?";
-        connection.query(query, [tableName, id], function(err, result){
+    insertOne: function(tableName, burger_name, devoured ){
+        var query = "INSERT INTO ?? ('burger_name', 'devoured')  VALUES (?,?) ";
+        connection.query(query, [tableName, burger_name, devoured], function(err, result){
             console.log(result);
         });
     },

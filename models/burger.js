@@ -8,7 +8,7 @@ var burger = {
         });
     },
     one: function(id, cb){
-        orm.selectOne("burgers", id, function(results){
+        orm.insertOne("burgers", burger_name, devoured, id, function(results){
             cb(results);
         });
     },
