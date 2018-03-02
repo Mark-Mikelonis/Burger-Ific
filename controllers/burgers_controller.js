@@ -3,16 +3,6 @@ var burger = require("../models/burger.js");
 
 var router = express.Router();
 
-// router.get("/index", function(req, res){
-//     burger.all(function(data){
-//         var hbsObject = {
-//             burgers: data
-//         };
-//         console.log(hbsObject);
-//         res.render("index",hbsObject);
-//     });
-// });
-
 router.get("/", function(req, res){
     burger.all(function(data){
         var hbsObject = {
@@ -24,7 +14,7 @@ router.get("/", function(req, res){
 });
 
 router.post("/api/burgers", function(req, res){
-    burger.one([
+    burger.create([
         "name", "devoured"
     ],[
         req.body.burger, req.body.id
@@ -47,3 +37,5 @@ router.put("/api/burgers/:id", function(req, res){
             }
         });
 });
+
+module.exports = router;
