@@ -7,16 +7,17 @@
     {{#unless devoured}}
       {{> burgers/burger-block devoured=false}}
     {{/unless}}
-  {{/each}}
+  {{/each}} 
 </ul>
 
-<h2>Cats that are sleepy!</h2>
+<h2>Burgers That are Devoured</h2>
 
 <ul>
   {{#each burgers}}
-    {{#if devoured}}
+    <p>Name: {{name}}</p>
+    {{!-- {{#if devoured}}
       {{> burgers/burger-block devoured=true}}
-    {{/if}}
+    {{/if}} --}}
   {{/each}}
 </ul>
 
