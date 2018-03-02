@@ -14,10 +14,9 @@
 
 <ul>
   {{#each burgers}}
-    <p>Name: {{name}}</p>
-    {{!-- {{#if devoured}}
+    {{#if devoured}}
       {{> burgers/burger-block devoured=true}}
-    {{/if}} --}}
+    {{/if}}
   {{/each}}
 </ul>
 
