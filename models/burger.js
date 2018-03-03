@@ -7,13 +7,14 @@ var burger = {
             cb(results);
         });
     },
-    create: function(id, cb){
-        orm.insertOne("burgers", burger_name, devoured, id, function(results){
+    create: function(burger_name, devoured, cb){
+        orm.insertOne("burgers", burger_name, devoured, function(results){
             cb(results);
         });
     },
-    update: function(devoured, id, cb){
-        orm.updateOne("burgers", devoured, id, function(results){
+    update: function(devoured, cb){
+        console.log("update data: " + devoured.devoured + devoured.id);
+        orm.updateOne("burgers", devoured.devoured, devoured.id, function(results){
             cb(results);
         });
     }

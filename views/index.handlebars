@@ -21,18 +21,44 @@
 </ul>
 
 <h2>Add a burger</h2>
-<form class="create-form">
+<form id="createBurger">
 
   <div class="form-group">
     <label for="burger">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+    <input type="text" id="burger" name="name">
   </div>
 
-  <div class="form-group">
-    <label for="slee">Eaten?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Eaten<br>
-    <input type="radio" name="devoured" value="0">  
-    </div>
-
-  <button type="submit">Add Cat</button>
+ <button type="submit">Add Burger</button>
 </form>
+
+<script type="text/javascript">
+    $("#createBurger").on("submit", function(event){
+        
+        event.preventDefault();
+        var newBurger = {
+            burger_name: $("#burger").val().trim(),
+            devoured: "false"
+        }
+        $.ajax("/api/burgers/", {
+            method: "POST", 
+            data: newBurger
+        }).then(
+            function(){
+                location.reload();
+            }
+        );
+    });
+    $(".changeDevoured").on("click", function(event){
+        event.preventDefault();
+        
+        var id = $(this).data("id");
+        console.log("id: " + id);
+        console.log("In changeDevoured: ");
+        $.ajax("/api/burgers/"+id,{
+            method: "PUT",
+            data: id
+        }).then( function(){
+            location.reload();
+        });
+    });
+</script>

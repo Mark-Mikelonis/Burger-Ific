@@ -17,7 +17,8 @@ var orm = {
             cb(result);
         });
     },
-    updateOne: function(tableName,id, devoured, cb){
+    updateOne: function(tableName, devoured, id, cb){
+        console.log("update one data: " + tableName + devoured + id);
         var query = "UPDATE ?? SET devoured = ? WHERE id= ?";
         connection.query(query, [tableName,devoured,id], function(err,result){
             console.log(result);

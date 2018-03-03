@@ -14,22 +14,25 @@ router.get("/", function(req, res){
 });
 
 router.post("/api/burgers", function(req, res){
-    burger.create([
-        "name", "devoured"
-    ],[
-        req.body.burger, req.body.id
-    ], function(result){
-        res.json({id: result.id});
+    console.log(req.body.burger_name);//.name, req.body.devoured);
+    
+    burger.create({
+        burger_name: req.body.burger_name, 
+        devoured: req.body.devoured
+    }, function(data){
+        console.log("in create: "+ data);
+        // res.json({id: result.id});
     
     });
 });
 
 router.put("/api/burgers/:id", function(req, res){
     var id = req.params.id;
-    var devoured = req.params.devoured;
+    console.log("button id: " + id);
+    var devoured = true;
 
     burger.update({
-        devoured: devoured}, id, function(data){
+        devoured: devoured, id: id}, function(data){
             if (data.changedRows === 0){
                 return res.status(404).end();
             } else {
