@@ -10,10 +10,12 @@ var orm = {
            cb(result);
         });
     },
-    insertOne: function(tableName, burger_name, devoured, cb){
-        var query = "INSERT INTO ?? ('burger_name', 'devoured')  VALUES (?,?) ";
-        connection.query(query, [tableName, burger_name, devoured], function(err, result){
-            console.log(result);
+    insertOne: function(tableName, burger, devoured, cb){
+        console.log("insertOne burger: " + burger + " " + devoured);
+        var query = "INSERT INTO ?? (burger_name, devoured)  VALUES (?,?) ";
+        connection.query(query, [tableName, burger, Boolean(devoured)], function(err, result){
+            if (err) throw err;
+            console.log("insertOne result: " + result);
             cb(result);
         });
     },
