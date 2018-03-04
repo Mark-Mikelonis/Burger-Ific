@@ -24,3 +24,12 @@ li {
       padding:10px;
       background-color: dimgrey;
   }
+.jumbotron{
+    height: 200px;
+    padding: 10px;
+    background-image: url("/assets/img/color-burger2.png");
+    background-size: 15%;
+    background-position-x: 10px;
+    background-position-y: 10px;
+    background-repeat: no-repeat;
+}
