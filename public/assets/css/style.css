@@ -1,0 +1,26 @@
+li {
+    margin: 5px 5px 10px 10px;
+    list-style:none;
+    /* margin: 5px; */
+    background: rgb(255, 0, 255);
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  #createBurger {
+    padding: 5px;
+    margin: 5px;
+    background: rgb(255, 0, 255);
+  }
+  
+  .form-group {
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+ 
+  .container{
+      padding:10px;
+      background-color: dimgrey;
+  }
