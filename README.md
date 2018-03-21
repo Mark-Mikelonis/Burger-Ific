@@ -30,11 +30,11 @@ node, express, express-handlebars, and MySQL based app
    `npm init` 
   5. Install all npm dependencies. From the command line type the following command:
    `npm install`
-  6. Install and configure MySQL ![MySQL] (https://www.mysql.com/) 
+  6. Install and configure MySQL (https://www.mysql.com/) 
   7. Use the schema.sql and seeds.sql files to setup and populate the database. Be sure to have your MySQL usernmae and password handy.
     * from the command line in the directory of the files type the following:
     `mysql -u <username> -p < schema.sql`
-    * followed by `mysql -u <username> -p burgers_db < seeds.sql>`
+    * followed by `mysql -u <username> -p burgers_db < seeds.sql`
   8. Start your server. From the command line type the following command:
     `nodemon server.js`  
   9. Point your browser to `localhost:3033` and the app should launch.
