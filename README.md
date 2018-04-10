@@ -11,7 +11,8 @@ node, express, express-handlebars, and MySQL based app
   * Add a burger to the burger list by usin gthe form and clicking the "Add Burger" button.
   * Click on the "Devour!" button to devour the burger and move it to the devoured list.
 
-![Burger-Ific](https://github.com/Mark-Mikelonis/burger/tree/master/public/assets/img/burgerific.gif)
+![Burger-Ific][burger]
+[burger]: (https://github.com/Mark-Mikelonis/burger/tree/master/public/assets/img/burgerific.gif)
 
 
 ## INSTRUCTIONS FOR USING THE WEB APP
